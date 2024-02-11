@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<link rel="icon" href="images/GA_logo.png">
+<title>Basketball Association inc.</title>
+<meta name="viewport" content="with=device-width,initial-scale=1.0">
+<link rel="stylesheet" href= "style_stats.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+<script defer src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script defer src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script defer src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+<script defer src="script_table.js"></script>
+
+
+
+
+
+
+  <section class="showcase_1">
+    <section class="container">
+
+      <div id="data-container"></div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Fetch data from your server and update the #data-container
+      $.get('http://localhost:3000', function (data) {
+        $('#data-container').text(JSON.stringify(data));
+      });
+    });
+  </script>
+
+      <!-- <table id="example" class="table table-striped">
+        <thead>
+            <tr>
+              <th>Player Name</th>
+              <th>Team</th>
+              <th>GP</th>
+              <th>PTS</th>
+              <th>FGM</th>
+              <th>FGA</th>
+              <th>FG%</th>
+              <th>3PM</th>
+              <th>3PA</th>
+              <th>3P%</th>
+              <th>FTM</th>
+              <th>FTA</th>
+              <th>FT%</th>
+              <th>REB</th>
+              <th>AST</th>
+              <th>STL</th>
+              <th>BLK</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hamed</td>
+            <td>0</td>
+            <td>0</td>
+            <td>30</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr> 
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Player Name</th>
+                <th>Team</th>
+                <th>GP</th>
+                <th>PTS</th>
+                <th>FGM</th>
+                <th>FGA</th>
+                <th>FG%</th>
+                <th>3PM</th>
+                <th>3PA</th>
+                <th>3P%</th>
+                <th>FTM</th>
+                <th>FTA</th>
+                <th>FT%</th>
+                <th>REB</th>
+                <th>AST</th>
+                <th>STL</th>
+                <th>BLK</th>
+                
+            </tr>
+        </tfoot>
+      </table> -->
+    </section>
+    <header>
+        <h2 class="logo"><a href="index_stats.html"><img src="images/GA_logo.png"></a></h2>
+      <div class="toggle_1"></div>
+    </header>
+
+    <ul class="social_1">
+      <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+    </ul>
+  </section>
+  <div class="menu">
+    <ul>
+      <li><a href="index_1.html">Home</a></li>
+      <li><a href="about_2.html">About</a></li>
+      <li><a href="services_1.html">Services</a></li>
+      <li><a href="contact_1.html">Contact</a></li>
+    </ul>
+  </div>
+
+
+
+<!-- social icon -->
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Menu Script -->
+<script>
+  const menuToggle = document.querySelector('.toggle_1');
+  const showcase = document.querySelector('.showcase_1');
+
+  menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      showcase.classList.toggle('active');
+  })
+</script>
